@@ -1,0 +1,14 @@
+#python3 packages:
+scikit-learn
+pandas
+numpy
+imbalanced-learn
+seaborn
+matplotlib
+flask
+plotly
+os
+collections
+datetime
+dask
+pickle
