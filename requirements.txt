@@ -7,7 +7,5 @@ seaborn
 matplotlib
 flask
 plotly
-collections
-datetime
 dask
 pickle
