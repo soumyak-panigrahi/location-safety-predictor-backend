@@ -29,12 +29,10 @@ def get_sentiment_score():
 
     inputs = [ hour, lat, long, minute]
     
-    inputs = list(map(float, inputs))
-    score = safety_score(inputs)
-    print(score)
-    score = round(float(score),2)
-    crime = most_possible_crime(inputs)
-    print(crime)
+    # inputs = list(map(float, inputs))
+    # score = safety_score(inputs)
+    # score = round(float(score),2)
+    # crime = most_possible_crime(inputs)
     response = {
         'review': inputs,
         'score': score,
