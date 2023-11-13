@@ -12,6 +12,7 @@ app.debug = True
 def get_sentiment_score():
     score = 90
     inputs = ''
+    crime = ''
     if request.method == 'GET':
         args = request.args
         # Initialize default values
@@ -26,12 +27,14 @@ def get_sentiment_score():
         long,lat,hour,minute = inputs['long'],inputs['lat'],inputs['hour'],inputs['minute']
         print(long,lat,hour, minute)
 
-    input = [ hour, lat, long, minute]
+    inputs = [ hour, lat, long, minute]
     
     inputs = list(map(float, inputs))
     score = safety_score(inputs)
+    print(score)
     score = round(float(score),2)
     crime = most_possible_crime(inputs)
+    print(crime)
     response = {
         'review': inputs,
         'score': score,

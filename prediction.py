@@ -11,7 +11,7 @@ scaler  = pickle.load(open('./models/scaler.pkl', 'rb'))
 
 
 def transform_input(input):
-	return scaler.transform([input])
+	return scaler.transform(np.asarray([input]))
 
 def probability_of_successful_arrest(input):
     return p_successful_arrest.predict_proba(transform_input(input))[0,1]
