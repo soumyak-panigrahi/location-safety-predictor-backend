@@ -1,8 +1,10 @@
 from flask import Flask, make_response, request, abort, jsonify, render_template
+from flask_cors import CORS
 #from api import make_soft_prediction, transform_input
 #import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 app.debug = True
 
 
