@@ -10,5 +10,5 @@ plotly
 dask
 gunicorn==19.7.1
 Flask-Cors
-xgboost
+xgboost==2.0.0
 imblearn
