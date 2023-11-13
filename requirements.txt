@@ -11,3 +11,4 @@ dask
 gunicorn==19.7.1
 Flask-Cors
 xgboost
+imblearn
