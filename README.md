@@ -15,7 +15,8 @@ post - https://location-safety.onrender.com/sentiment_score
 post payload body -
 
 {
-    "long":"10",
-    "lat":"10",
-    "time":"10"
+"long":"10",
+"lat":"10",
+"hour":"10",
+"minute":"55"
 }

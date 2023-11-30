@@ -1,6 +1,6 @@
 from flask import Flask, make_response, request, abort, jsonify, render_template
 from flask_cors import CORS
-from prediction import safety_score, most_possible_crime
+from prediction import safety_score, most_possible_crime, probability_of_being_on_women
 #import numpy as np
 
 app = Flask(__name__)
@@ -33,10 +33,12 @@ def get_sentiment_score():
     score = safety_score(inputs)
     score = round(float(score),2)
     crime = most_possible_crime(inputs)
+    women = probability_of_being_on_women(inputs)
     response = {
         'review': inputs,
         'score': score,
-        'crime': crime
+        'crime': crime,
+        'women': women
     }
 
     print("response is: {}".format(response))
