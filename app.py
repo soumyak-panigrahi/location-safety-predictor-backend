@@ -34,6 +34,7 @@ def get_sentiment_score():
     score = round(float(score),2)
     crime = most_possible_crime(inputs)
     women = probability_of_being_on_women(inputs)
+    women = round(float(women),2)
     response = {
         'review': inputs,
         'score': score,

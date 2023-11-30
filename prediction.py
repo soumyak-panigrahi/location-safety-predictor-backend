@@ -36,4 +36,4 @@ def most_possible_crime(input):
     return crimes[crime_type(input)]
 
 def probability_of_being_on_women(input):
-    return p_successful_arrest.predict_proba(transform_input(input))[0,1]
+    return p_of_being_on_women.predict_proba(transform_input(input))[0,1]
